@@ -1,7 +1,10 @@
 package patterns.calc;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class TaxCalculator {
-    private NdsResolver ndsResolver = new RussianNdsResolver();
+    private NdsResolver ndsResolver;
 
     public double withNds(double price) {
         return ndsResolver.getNds() * price + price;

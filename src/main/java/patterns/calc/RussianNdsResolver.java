@@ -1,5 +1,7 @@
 package patterns.calc;
 
+import lombok.SneakyThrows;
+
 public class RussianNdsResolver implements NdsResolver {
     private double nds;
 
@@ -7,8 +9,10 @@ public class RussianNdsResolver implements NdsResolver {
         nds = getNdsFromCentralBank();
     }
 
+    @SneakyThrows
     private double getNdsFromCentralBank() {
-        return 0.2;
+        Thread.sleep(2000);
+        return 0.18;
     }
 
     @Override
