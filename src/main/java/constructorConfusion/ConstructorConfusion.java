@@ -1,7 +1,7 @@
 package constructorConfusion;
 
 public class ConstructorConfusion {
-    private String someValue;
+    private final String someValue;
 
     public ConstructorConfusion(String someValue) {
         System.out.println("ConstructorConfusion(String) called");
@@ -10,7 +10,7 @@ public class ConstructorConfusion {
 
     public ConstructorConfusion(int someValue) {
         System.out.println("ConstructorConfusion(int) called");
-        this.someValue = "Number: " + Integer.toString(someValue);
+        this.someValue = "Number: " + someValue;
     }
 
     public String toString() {
