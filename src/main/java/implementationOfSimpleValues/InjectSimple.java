@@ -5,18 +5,23 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Component("injectSimple")
+@Service("injectSimple")
 public class InjectSimple {
 
-    private String name = "Vladimir Glinskikh";
+    @Value("#{injectSimple.name}")
+    private String name;
 
-    private int age = 100500;
+    @Value("#{injectSimple.age}")
+    private int age;
 
-    private float height = 1.70f;
+    @Value("#{injectSimple.height}")
+    private float height;
 
-    private boolean programmer = true;
+    @Value("#{injectSimple.programmer}")
+    private boolean programmer;
 
-    private Long ageInSeconds = 24224234L;
+    @Value("#{injectSimple.ageInSeconds}")
+    private Long ageInSeconds;
 
     public static void main(String[] args) {
         GenericXmlApplicationContext context = new GenericXmlApplicationContext();
