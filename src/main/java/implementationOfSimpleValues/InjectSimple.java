@@ -2,20 +2,21 @@ package implementationOfSimpleValues;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service("injectSimple")
+@Component("injectSimple")
 public class InjectSimple {
-    @Value("Vladimir Glinskikh")
-    private String name;
-    @Value("100500")
-    private int age;
-    @Value("1.70")
-    private float height;
-    @Value("true")
-    private boolean programmer;
-    @Value("12121474723")
-    private Long ageInSeconds;
+
+    private String name = "Vladimir Glinskikh";
+
+    private int age = 100500;
+
+    private float height = 1.70f;
+
+    private boolean programmer = true;
+
+    private Long ageInSeconds = 24224234L;
 
     public static void main(String[] args) {
         GenericXmlApplicationContext context = new GenericXmlApplicationContext();
