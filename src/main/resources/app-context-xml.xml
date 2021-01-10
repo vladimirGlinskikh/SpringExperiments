@@ -13,21 +13,30 @@
     <!--        </constructor-arg>-->
     <!--    </bean>-->
 
-    <bean id="injectSimple" class="implementationOfSimpleValues.InjectSimple"
-    p:name="Vladimir Glinskikh"
-    p:age="100500"
-    p:height="1.70"
-    p:programmer="true"
-    p:ageInSeconds="100500"/>
+    <!--    <bean id="injectSimple" class="implementationOfSimpleValues.InjectSimple"-->
+    <!--    p:name="Vladimir Glinskikh"-->
+    <!--    p:age="100500"-->
+    <!--    p:height="1.70"-->
+    <!--    p:programmer="true"-->
+    <!--    p:ageInSeconds="100500"/>-->
 
-<!--    <content:component-scan base-package="implementationOfSimpleValues"/>-->
+    <!--    <content:component-scan base-package="implementationOfSimpleValues"/>-->
 
     <!--    <context:component-scan base-package="implementationOfSimpleValues"/>-->
 
-<!--    <bean id="injectSimple" class="implementationOfSimpleValues.InjectSimple"-->
-<!--          p:name="#{injectSimple.name}"-->
-<!--          p:age="#{injectSimple.age + 1}"-->
-<!--          p:height="#{injectSimple.height}"-->
-<!--          p:programmer="#{injectSimple.programmer}"-->
-<!--          p:ageInSeconds="#{injectSimple.ageInSeconds}"/>-->
+    <!--    <bean id="injectSimple" class="implementationOfSimpleValues.InjectSimple"-->
+    <!--          p:name="#{injectSimple.name}"-->
+    <!--          p:age="#{injectSimple.age + 1}"-->
+    <!--          p:height="#{injectSimple.height}"-->
+    <!--          p:programmer="#{injectSimple.programmer}"-->
+    <!--          p:ageInSeconds="#{injectSimple.ageInSeconds}"/>-->
+
+    <bean id="oracle" name="wiseWorm"
+          class="implementingComponentsSpringBeansInTheSameXMLMarkupBlock.BookWormOracle"/>
+    <bean id="injectRef"
+          class="implementingComponentsSpringBeansInTheSameXMLMarkupBlock.InjectRef">
+        <property name="oracle">
+            <ref bean="oracle"/>
+        </property>
+    </bean>
 </beans>
