@@ -36,7 +36,7 @@
     <bean id="injectRef"
           class="implementingComponentsSpringBeansInTheSameXMLMarkupBlock.InjectRef">
         <property name="oracle">
-            <ref bean="oracle"/>
+            <ref bean="wiseWorm"/>
         </property>
     </bean>
 </beans>
